@@ -1,0 +1,176 @@
+body {
+  height: 5000px;
+}
+
+.enableBlur > *:not(.loginPart) {
+  filter: blur(3px);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Comfortaa", cursive;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+ul {
+  list-style: none;
+}
+
+.topNav ul {
+  display: flex;
+  justify-content: center;
+}
+.topNav ul li {
+  margin-right: 20px;
+}
+.topNav ul a {
+  padding: 20px;
+  background-color: teal;
+  color: #fff;
+  font-weight: bold;
+  display: inline-block;
+  position: relative;
+  top: 0;
+  transition: all 0.3s linear;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+}
+.topNav ul a:hover {
+  top: -10px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+}
+header h3 {
+  text-align: center;
+}
+header h3:first-of-type {
+  margin-top: 50px;
+}
+header h3 span {
+  font-weight: bold;
+}
+#layout {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("https://betanews.com/wp-content/uploads/2015/09/Windows-10-lock-screen.jpg");
+  background-size: cover;
+  background-position: center;
+  transform: translateY(-100%);
+  transition: all 0.5s linear;
+  /* filter: blur(10px); */
+}
+
+#layout .timeHolder,
+#layout .userList {
+  position: absolute;
+  left: 3%;
+  bottom: 5%;
+}
+
+#layout .userList {
+  left: 0;
+  display: none;
+  filter: blur(0px);
+}
+#layout .userList li {
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+#layout .userList li:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+#layout .timeHolder * {
+  font-size: 4em;
+  color: #fff;
+}
+
+#layout .timeHolder h3 {
+  font-size: 2em;
+}
+
+#layout .userList .userIcon {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: #fff;
+  background-color: rgba(85, 85, 85, 0.61);
+  line-height: 40px;
+  text-align: center;
+  margin: 0 10px 5px 0;
+}
+
+#layout .userList .userName {
+  color: #fff;
+  font-size: 1em;
+}
+
+#layout .loginPart {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 20%;
+  display: none;
+}
+
+/* body.enableBlur > * {
+  filter: blur(4.2px);
+}
+
+.disableBlur {
+  filter: blur(0);
+} */
+
+#layout .loginPart .userIcon {
+  width: 120px;
+  height: 120px;
+  display: inline-block;
+  border-radius: 100%;
+  background-color: rgba(85, 85, 85, 0.61);
+}
+#layout .loginPart .userIcon i {
+  font-size: 4em;
+  line-height: 120px;
+}
+
+#layout .loginPart .logUserName {
+  margin: 30px 0px;
+  font-size: 2.5em;
+  color: #fff;
+}
+
+#layout .loginPart .inputWrapper {
+  position: relative;
+}
+
+#layout .loginPart .inputWrapper i {
+  font-size: 1.2em;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  cursor: pointer;
+  color: #555;
+  display: none;
+  width: 38px;
+  height: 100%;
+  line-height: 38px;
+  border-radius: 0.25rem;
+}
+
+#layout .loginPart .inputWrapper i.active {
+  background-color: #0d6efd;
+  color: white;
+}
+
+#layout .loginPart .inputWrapper .alert {
+  display: none;
+}
