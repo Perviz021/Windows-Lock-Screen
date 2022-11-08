@@ -117,10 +117,8 @@ $(function () {
 
   $("#layout").click(function () {
     //nextAll butun novbeti qonsulara isleyir
-    $("body").addClass("enableBlur");
-    // $("#layout .loginPart").addClass("disableBlur");
+    $(".blurredDiv").addClass("enableBlur");
     $(".timeHolder").fadeOut(300).nextAll().fadeIn(500);
-    $("#layout .loginPart").css(zIndex, "999");
   });
 
   // add click event to users
